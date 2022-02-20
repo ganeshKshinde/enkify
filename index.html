@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <nav class="navitems">
+            <div class="toggle-cont">
+               <img src="img/togimg.png" class="toggimg" alt="">
+            </div>
+            <div class="loc-cont">
+                <img src="img/locimg.png" alt="">
+                <p class="loctxt">Lithos Restaurant, Athens</p>
+            </div>
+            <div class="datebox">
+                <img src="img/left.png" alt="" class="daimg">
+                <p class="datxt">Today, Dec23</p>
+                <img src="img/righ.png" alt="" class="daimg">
+            </div>
+            <div class="datebox">
+                <p class="datxt">Breakfast</p>
+                <img src="img/down.png" alt="" class="">
+            </div>
+        </nav>
+        <div class="reser-cont">
+            <p class="newresertxt">New Reservation</p>
+            <img src="img/close.png" id="close" alt="" class="closeimg">
+        </div>
+        <div class="info-cont">
+            <div class="infobutt-cont">
+                <button class="infobutt buttonactive" onclick="myfun(this, 'guest')">Guest Info</button>
+                <button class="infobutt" onclick="myfun(this, 'booking')">Booking info</button>
+            </div>
+        </div>
+        <div class="tab-content" id="guest">
+            <div class="searchdatacont">
+                <input type="text" class="serchinp" placeholder="Search Guest" id="serchinp" >
+                <div class="bookcont" id="bookcont">
+                    <div class="boolclosecont">
+                        <p class="txtb1" >Guest Book</p>
+                        <img src="img/close.png" alt="" class="guestcloseimg">
+                    </div>
+                    <p class="addtotxt">Add to Guestbook</p>
+                    <div class="guestlist" id="guestlist">
+                        <div class="guestbox ganesh">
+                            <img src="img/sabrina.png" class="guestimg" alt="Sabrina Davies">
+                            <div class="guestdata">
+                                <p class="guestname" data-id="ganesh">Sabrina Davies</p>
+                                <p class="guestno">+54 9999999999</p>
+                            </div>
+                        </div>
+                        <div class="guestbox">
+                            <img src="img/rodriguez.png" class="guestimg" alt="Sabrina Rodriguez">
+                            <div class="guestdata">
+                                <p class="guestname" data-id="ram">Sabrina Rodriguez</p>
+                                <p class="guestno">+54 9999999999</p>
+                            </div>
+                        </div>
+                        <div class="guestbox">
+                            <img src="img/bonucci.png" class="guestimg" alt="Sabrina Bonucci">
+                            <div class="guestdata">
+                                <p class="guestname" data-id="lakhan">Sabrina Bonucci</p>
+                                <p class="guestno">+54 9999999999</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="editguest-cont">
+                <div class="pdetailb-cont">
+                    <div class="namebox">
+                        <p class="namelable">First Name</p>
+                        <input type="text" class="nameinput" value="Sabrina">
+                    </div>
+                    <div class="namebox">
+                        <p class="namelable">Last Name</p>
+                        <input type="text" class="nameinput" value="Stan">
+                    </div>
+                </div>
+                <div class="pdetailb-cont">
+                    <div class="namebox">
+                        <p class="namelable">First Name</p>
+                        <div class="phonecont">
+                            <select name="countrycode" id="countrycode" class="slectinput">
+                                <option value="45">+45</option>
+                                <option value="30">+30</option>
+                                <option value="91">+91</option>
+                            </select>
+                            <div class="line">.</div>
+                            <input type="number" name="number" id="" value="55556650200" class="inputno">
+                        </div>
+                    </div>
+                    <div class="namebox">
+                        <p class="namelable">Last Name</p>
+                        <input type="text" class="secinput" value="Stan" >
+                    </div>
+                </div>
+                <div class="guestdataconter">
+                    <div class="counterbox">
+                        <p class="counnum">0</p>
+                        <p class="countertxt">Visits</p>
+                    </div>
+                    <div class="counterbox">
+                        <p class="counnum">0</p>
+                        <p class="countertxt">No-Show</p>
+                    </div>
+                    <div class="counterbox">
+                        <p class="counnum">0</p>
+                        <p class="countertxt">Spend</p>
+                    </div>
+                    <div class="counterbox">
+                        <p class="counnum">0</p>
+                        <p class="countertxt">Cancelations</p>
+                    </div>
+                </div>
+                <div class="comment-cont">
+                    <div class="bb">
+                        <p class="itxt">i</p>
+                        <p class="commenttxt">Comments</p>
+                    </div>
+                    <div class="bb">
+                        <p class="comtxt2">Previous comments</p>
+                        <p class="commcount">4</p>
+                    </div>
+                </div>
+                <div class="combox">
+                    <div class="comboxin">
+                        <p class="combtxt">Requested cake for celebration</p>
+                    </div>
+                </div>
+                <div class="comment-cont">
+                    <div class="bb">
+                        <p class="itxt">i</p>
+                        <p class="commenttxt">Vist Tags</p>
+                    </div>
+                </div>
+                <div class="combox">
+                    <div class="comboxin selelement">
+                        <label class="container">..................
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">Booth Requested <span class="desel">X</span></span>
+                        </label>
+                        <label class="container">...........
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">High chair <span class="desel">X</span></span>
+                        </label>
+                        <label class="container">.........
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">Birthday <span class="desel">X</span></span>
+                        </label>
+                        <label class="container">.........
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">Birthday <span class="desel">X</span></span>
+                        </label>
+                        <label class="container">....................
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">Wheel chair access <span class="desel">X</span></span>
+                        </label>
+                        <label class="container">..................
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">Booth Requested <span class="desel">X</span></span>
+                        </label>
+                        <label class="container">.................
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">Patio Requested <span class="desel">X</span></span>
+                        </label>
+                        <label class="container">.
+                            <input type="checkbox" checked="checked">..........
+                            <span class="checkmark">Quite Table <span class="desel">X</span></span>
+                        </label>
+                        <label class="container">...................
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">Special occasions <span class="desel">X</span></span>
+                        </label>
+                        <label class="container">..............
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">Graduation <span class="desel">X</span></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="footertime">
+                    <button class="editback" id="editback">Back</button>
+                    <button class="editnext">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" style="padding-bottom: 10%;" id="booking">
+            <div class="top-cont">
+                <p class="partytxt">Party Size</p>
+                <div class="swiper">
+                    <div class="swiper-wrapper" id="swiper-wrapper">
+                      <div class="swiper-slide">1</div>
+                      <div class="swiper-slide">2</div>
+                      <div class="swiper-slide">3</div>
+                      <div class="swiper-slide">4</div>
+                      <div class="swiper-slide">5</div>
+                      <div class="swiper-slide activeslide">6</div>
+                      <div class="swiper-slide">7</div>
+                      <div class="swiper-slide">8</div>
+                      <div class="swiper-slide">9</div>
+                      <div class="swiper-slide">10</div>
+                      <div class="swiper-slide">11</div>
+                      <div class="swiper-slide">12</div>
+                      <div class="swiper-slide">13</div>
+                      <div class="swiper-slide">14</div>
+                      <div class="swiper-slide">15</div>
+                      <div class="swiper-slide">16</div>
+                    </div>
+                    <div class="arrobox">
+                        <img src="img/dd.png" class="up" id="prev"  alt="">
+                        <img src="img/dd.png" class="down" id="next" alt="">
+                    </div>
+                </div>
+                <p class="resertxt">Reservation for</p>
+                <div class="typebox">
+                    <div class="radiobox48">
+                        <label class="tabaco-cont">.
+                            <input type="checkbox" name="goodhealth" value="yes" class="inputitem">
+                            <span class="tobaco-mark">Food</span>
+                        </label>
+                    </div>
+                    <div class="radiobox48">
+                        <label class="tabaco-cont">.
+                            <input type="checkbox" name="goodhealth" value="yes" class="inputitem">
+                            <span class="tobaco-mark">Snack</span>
+                        </label>
+                    </div>
+                    <div class="radiobox48">
+                        <label class="tabaco-cont">.
+                            <input type="checkbox" name="goodhealth" value="yes" class="inputitem">
+                            <span class="tobaco-mark">Drinks</span>
+                        </label>
+                    </div>
+                </div>
+                
+
+            </div>
+            <div class="datetime-cont">
+                <div class="datbox">
+                    <p class="datetxt">Date</p>
+                    <input type="text" id="mydate" class="mydate">
+                    <div class="orderbox">
+                        <div class="detailbox">
+                            <img src="" alt="" class="detaicion">
+                            <p>10/5</p>
+                        </div>
+                        <div class="detailbox">
+                            <img src="" alt="" class="detaicion">
+                            <p>12/5</p>
+                        </div>
+                        <div class="detailbox">
+                            <img src="" alt="" class="detaicion">
+                            <p>12/5</p>
+                        </div>
+                        <div class="detailbox">
+                            <img src="" alt="" class="detaicion">
+                            <p>34/17</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timebox">
+                    <p class="timetxt">Select Shift & Time</p>
+                    <div class="timebuttcont">
+                        <button class="timebutt" onclick="myf(this, 'breakfast')">Breakfast</button>
+                        <button class="timebutt" onclick="myf(this, 'lunch')">Lunch</button>
+                        <button class="timebutt timactive" onclick="myf(this, 'dinner')">Dinner</button>
+                    </div>
+                    <div class="slottag" id="breakfast">
+                        <div class="slottxtb">
+                            <p class="slottxt">Available Slots</p>
+                            <p class="slottxt">Crowd Limit</p>
+                        </div>
+                        <div class="slotin ">
+                            <p class="slottxt">7:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">8:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin ">
+                            <p class="slottxt ">18:30</p>
+                            <p class="slottxt" style="color: #f07777;">2/15</p>
+                        </div>
+                        <div class="slotin sel">
+                            <p class="slottxt">9:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">10:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">10:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                    </div>
+                    <div class="slottag" id="lunch">
+                        <div class="slottxtb">
+                            <p class="slottxt">Available Slots</p>
+                            <p class="slottxt">Crowd Limit</p>
+                        </div>
+                        <div class="slotin ">
+                            <p class="slottxt">12:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin sel">
+                            <p class="slottxt">1:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">2:30</p>
+                            <p class="slottxt" style="color: #f07777;">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">3:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">6:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">18:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                    </div>
+                    <div class="slottag" id="dinner">
+                        <div class="slottxtb">
+                            <p class="slottxt">Available Slots</p>
+                            <p class="slottxt">Crowd Limit</p>
+                        </div>
+                        <div class="slotin sel">
+                            <p class="slottxt">18:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">18:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">18:30</p>
+                            <p class="slottxt" style="color: #f07777;">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">18:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">18:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                        <div class="slotin">
+                            <p class="slottxt">18:30</p>
+                            <p class="slottxt">2/15</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footertime">
+                <button class="editback">Previous</button>
+                <button class="editnext">Create Reservation</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        function myfun(butt,eleid) {
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(eleid).style.display = "block";
+
+            removebutonactive= document.getElementsByClassName("infobutt");
+            for (i = 0; i < removebutonactive.length; i++) {
+                removebutonactive[i].classList.remove('buttonactive');
+            }
+            butt.classList.add('buttonactive');
+        }
+        document.getElementById("guest").style.display = "block";
+    </script>
+    <script>
+    
+        $("#serchinp").click(function(){
+            $("#bookcont").slideDown(1000);
+        });
+        $(".guestcloseimg").click(function(){
+            $("#bookcont").slideUp(1000);
+        });
+
+        $(document).ready(function(){
+        $("#serchinp").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $(".guestlist *").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+        });
+
+
+        $(".guestbox").click(function(){
+            $(".searchdatacont").hide();
+            $(".editguest-cont").show();
+        });
+        $("#editback").click(function(){
+            $(".searchdatacont").show();
+            $(".editguest-cont").hide();
+        });
+        
+    </script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            spaceBetween: 4,
+            width:48,
+        });
+        $("#prev").click(function(){
+            swiper.slidePrev();
+        });
+        $("#next").click(function(){
+            swiper.slideNext();
+        });
+
+    </script>
+    <script>
+        var header = document.getElementById("swiper-wrapper");
+        var btns = header.getElementsByClassName("swiper-slide");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("activeslide");
+          current[0].className = current[0].className.replace("activeslide", "");
+          this.className += " activeslide";
+          });
+        }
+    </script>
+    <script>
+        configg = {
+            enableTime: false,
+            dateFormat: "m/d/Y",
+            inline: true
+        }
+        flatpickr("#mydate", configg);
+    </script>
+    <script>
+        function myf(butt,eleid) {
+            tabcontent = document.getElementsByClassName("slottag");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(eleid).style.display = "block";
+
+            removebutonactive= document.getElementsByClassName("timebutt");
+            for (i = 0; i < removebutonactive.length; i++) {
+                removebutonactive[i].classList.remove('timactive');
+            }
+            butt.classList.add('timactive');
+        }
+        document.getElementById("dinner").style.display = "block";
+    </script>
+</body>
+</html>
